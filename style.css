@@ -1210,3 +1210,48 @@ select:focus {
     color:#777;
     font-style:italic;
 }
+
+@media (max-width: 768px){
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        gap:15px;
+        background:#fff;
+        position:absolute;
+        top:80px;
+        right:20px;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 5px 20px rgba(0,0,0,.15);
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:flex;
+        flex-direction:column;
+        gap:5px;
+        background:none;
+        border:none;
+        cursor:pointer;
+    }
+
+    .menu-toggle span{
+        width:25px;
+        height:3px;
+        background:#333;
+        display:block;
+        border-radius:10px;
+    }
+}
+
+@media (min-width: 769px){
+
+    .menu-toggle{
+        display:none;
+    }
+
+}
