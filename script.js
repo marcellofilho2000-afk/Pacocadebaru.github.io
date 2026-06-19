@@ -1,24 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+const btn = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-
-    if (menuToggle && menu) {
-
-        menuToggle.addEventListener("click", function () {
-
-            menu.classList.toggle("active");
-
-            const expanded =
-                menuToggle.getAttribute("aria-expanded") === "true";
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                !expanded
-            );
-
-        });
-
-    }
-
+btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+    menu.classList.toggle("active");
 });
