@@ -409,6 +409,7 @@ select {
         position: fixed;
         inset: 72px 16px 16px 16px;
         flex-direction: column;
+        align-items: stretch;
         gap: 8px;
         padding: 12px;
         background: linear-gradient(180deg, rgba(23,59,44,0.98), rgba(18,43,32,0.98));
@@ -421,8 +422,13 @@ select {
         display: flex;
     }
 
+    .menu li {
+        width: 100%;
+    }
+
     .menu a {
         display: block;
+        width: 100%;
         padding: 12px 16px;
         border-radius: 8px;
         color: #fff;
@@ -1248,71 +1254,4 @@ select:focus {
     font-size:0.8rem;
     color:#777;
     font-style:italic;
-}
-
-/* MENU MOBILE */
-
-.menu{
-    display:flex;
-    gap:20px;
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-.menu-toggle{
-    display:none;
-}
-
-@media(max-width:768px){
-
-    .menu-toggle{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        gap:5px;
-        background:none;
-        border:none;
-        cursor:pointer;
-        z-index:1001;
-    }
-
-    .menu-toggle span{
-        width:30px;
-        height:3px;
-        background:#fff;
-        border-radius:5px;
-        transition:.3s;
-    }
-
-    .menu{
-        display:none;
-        position:fixed;
-        top:80px;
-        right:10px;
-        width:220px;
-        background:#173b2c;
-        padding:15px;
-        border-radius:12px;
-        flex-direction:column;
-        box-shadow:0 5px 20px rgba(0,0,0,.3);
-        z-index:9999;
-    }
-
-    .menu.is-open{
-        display:flex !important;
-    }
-
-    .menu li{
-        width:100%;
-    }
-
-    .menu a{
-        display:block;
-        color:#fff;
-        padding:12px;
-        text-decoration:none;
-    }
-
-    /* visual state for toggle is handled via [aria-expanded="true"] above */
 }
