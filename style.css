@@ -1230,6 +1230,7 @@ select:focus {
     .menu-toggle{
         display:flex;
         flex-direction:column;
+        justify-content:center;
         gap:5px;
         background:none;
         border:none;
@@ -1256,17 +1257,22 @@ select:focus {
         border-radius:12px;
         flex-direction:column;
         box-shadow:0 5px 20px rgba(0,0,0,.3);
-        z-index:1000;
+        z-index:9999;
     }
 
     .menu.active{
-        display:flex;
+        display:flex !important;
+    }
+
+    .menu li{
+        width:100%;
     }
 
     .menu a{
         display:block;
         color:#fff;
         padding:12px;
+        text-decoration:none;
     }
 
     .menu-toggle.active span:nth-child(1){
