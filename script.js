@@ -7,6 +7,8 @@ if (menuToggle && menu) {
         const aberto = menu.classList.toggle('is-open');
         menuToggle.setAttribute('aria-expanded', aberto ? 'true' : 'false');
         document.body.classList.toggle('menu-open', aberto);
+        // keep visual state in sync for older CSS rules
+        menuToggle.classList.toggle('active', aberto);
     });
 
     // Close menu when focus moves away (keyboard) or when clicking outside
@@ -16,6 +18,7 @@ if (menuToggle && menu) {
                 menu.classList.remove('is-open');
                 menuToggle.setAttribute('aria-expanded', 'false');
                 document.body.classList.remove('menu-open');
+                menuToggle.classList.remove('active');
             }
         }
     });
