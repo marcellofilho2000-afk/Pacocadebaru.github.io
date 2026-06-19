@@ -1,15 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const btn = document.querySelector(".menu-toggle");
+    const menuBtn = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
-    if (!btn || !menu) return;
-
-    btn.addEventListener("click", function () {
-
-        btn.classList.toggle("active");
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
         menu.classList.toggle("active");
-
     });
 
 });
